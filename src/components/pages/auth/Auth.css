@@ -1,0 +1,41 @@
+form{
+    display: block;
+    background-color: white;
+    box-shadow: 1px 1px 3px 2px #dddd;
+    margin: 40px auto;
+    max-width: 700px;
+    max-height: 900px;
+    padding: 20px 40px;
+
+
+}
+
+form input, textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(225, 225, 225);
+    border: 1px solid black;
+}
+
+form span{
+    color: rgb(29,185,237);
+}
+
+form button{
+    height: 30px;
+    /* width: 80px; */
+    align-items: center;
+    margin: 10px auto;
+    background-color: rgb(29,185,237);
+    border: none;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.switch{
+    background-color: white;
+    color: black;
+}
