@@ -67,7 +67,7 @@ const Auth = () => {
            localStorage.setItem('email',data.email)
            updateTheToken(data.idToken)
 
-          navigate('/store');
+          navigate('/inbox');
         } catch (error) {
           alert(error.message);
         }

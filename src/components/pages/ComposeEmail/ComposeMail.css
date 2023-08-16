@@ -121,8 +121,7 @@
   }
   
   .form-field.-select > .field {
-    -webkit-appearance: none;
-       -moz-appearance: window;
+   
     position: relative;
     z-index: 1;
     background-color: transparent;
@@ -162,7 +161,7 @@
     display: inline-block;
     padding: 16px;
     border: 0;
-    color: white;
+    color: rgb(94, 138, 224);
     letter-spacing: 0.02em;
     border-radius: 2px;
     text-decoration: none;

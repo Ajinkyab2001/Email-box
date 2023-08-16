@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const email = localStorage.getItem("email")?.replace("@", "").replace(".", "");
+// const email = localStorage.getItem("email").replace("@", "").replace(".", "");
 const fetchEmailsSlice = createSlice({
   name: "fetchEmails",
   initialState: {
@@ -38,6 +38,7 @@ export const { updateRecivedEmails, updateSentEmails,updateSingleObj } =
 export default fetchEmailsSlice.reducer;
 
 export const postEmail = (mailBody) => {
+    const email = localStorage.getItem("email").replace("@", "").replace(".", "");
   const receiverMail = mailBody.receiverMail.replace("@", "").replace(".", "");
   return async (dispatch, getState) => {
     try {
@@ -61,6 +62,7 @@ export const postEmail = (mailBody) => {
 };
 
 export const getSentEmails = () => {
+    const email = localStorage.getItem("email").replace("@", "").replace(".", "");
   return async (dispatch, getState) => {
     try {
       const sentResponse = await axios.get(
@@ -75,6 +77,7 @@ export const getSentEmails = () => {
 };
 
 export const fetchInboxEmails = () => {
+    const email = localStorage.getItem("email").replace("@", "").replace(".", "");
   return async (dispatch, getState) => {
     try {
       const receivedResponse = await axios.get(
@@ -90,6 +93,7 @@ export const fetchInboxEmails = () => {
 
 
 export const updateIsReadToTrue = (id,obj) => {
+    const email = localStorage.getItem("email").replace("@", "").replace(".", "");
   return async (dispatch, getState) => {
     try {
       const updateResponse = await axios.put(
@@ -105,6 +109,7 @@ export const updateIsReadToTrue = (id,obj) => {
 };
 
 export const deleteEmail = (id,render) => {
+    const email = localStorage.getItem("email").replace("@", "").replace(".", "");
   let endpoint = render === 'inbox'?'receive':'sent'
   return async (dispatch, getState) => {
     try {

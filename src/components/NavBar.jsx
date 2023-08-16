@@ -16,12 +16,12 @@ const NavBar = () => {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link as={Link} to='/'>Inbox</Nav.Link>
-      <Nav.Link as={Link} to='/'>Sent</Nav.Link>
-      <Nav.Link as={Link} to='/composemail' >Compose</Nav.Link>
+      <Nav.Link as={Link} to={isLoggedIn?'/inbox':'/authentication'}>Inbox</Nav.Link>
+      <Nav.Link as={Link} to={isLoggedIn?'/sent':'/authentication'}>Sent</Nav.Link>
+      <Nav.Link as={Link} to={isLoggedIn?'/composemail':'/authentication'} >Compose</Nav.Link>
       <NavDropdown title="Action" id="basic-nav-dropdown">
         <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
-        <NavDropdown.Item >Login</NavDropdown.Item>
+        {/* <NavDropdown.Item >Login</NavDropdown.Item> */}
         {/* <NavDropdown.Item >Something</NavDropdown.Item> */}
         
       </NavDropdown>
